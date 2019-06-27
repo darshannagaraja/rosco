@@ -169,11 +169,11 @@ class BakeryController {
       if (rebake == "1") {
         registry.counter(registry.createId("bakesRequested", [flavor: "rebake"])).increment()
 
-        String bakeId = bakeStore.deleteBakeByKeyPreserveDetails(bakeKey)
+        /* String bakeId = bakeStore.deleteBakeByKeyPreserveDetails(bakeKey)
 
         if (bakeId) {
           jobExecutor.cancelJob(bakeId)
-        }
+        } */
       } else {
         def existingBakeStatus = queryExistingBakes(bakeKey)
 
